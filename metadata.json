@@ -1,0 +1,85 @@
+[
+  {
+    "metadataOutputVersion" : "3.0",
+    "shortDescription" : "Pinned Mel-Band RoFormer, 2-second spectral Core ML feasibility",
+    "outputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 1 × 2050 × 201 × 2)",
+        "shortDescription" : "",
+        "shape" : "[1, 2050, 201, 2]",
+        "name" : "vocals_spectrum",
+        "type" : "MultiArray"
+      }
+    ],
+    "storagePrecision" : "Mixed (Float16, Float32)",
+    "modelParameters" : [
+
+    ],
+    "author" : "KimberleyJensen; john-rocky spectral conversion",
+    "specificationVersion" : 9,
+    "license" : "MIT",
+    "mlProgramOperationTypeHistogram" : {
+      "Ios18.mul" : 340,
+      "Ios18.matmul" : 1,
+      "Ios18.realDiv" : 96,
+      "Ios18.sigmoid" : 72,
+      "Ios18.scaledDotProductAttention" : 12,
+      "Split" : 98,
+      "Tile" : 96,
+      "Ios18.gather" : 1,
+      "Ios18.add" : 49,
+      "Ios18.reshape" : 112,
+      "Ios18.maximum" : 96,
+      "Ios18.linear" : 300,
+      "Ios18.gelu" : 12,
+      "Ios18.concat" : 25,
+      "Ios18.tanh" : 120,
+      "Ios18.transpose" : 51,
+      "Stack" : 26,
+      "Ios18.cast" : 244,
+      "Ios18.sub" : 1,
+      "Ios18.squeeze" : 144,
+      "Ios18.sliceByIndex" : 4,
+      "Ios16.reduceL2Norm" : 96
+    },
+    "computePrecision" : "Mixed (Float16, Float32, Int32, UInt16)",
+    "stateSchema" : [
+
+    ],
+    "isUpdatable" : "0",
+    "availability" : {
+      "macOS" : "15.0",
+      "tvOS" : "18.0",
+      "visionOS" : "2.0",
+      "watchOS" : "11.0",
+      "iOS" : "18.0",
+      "macCatalyst" : "18.0"
+    },
+    "modelType" : {
+      "name" : "MLModelType_mlProgram"
+    },
+    "inputSchema" : [
+      {
+        "hasShapeFlexibility" : "0",
+        "isOptional" : "0",
+        "dataType" : "Float32",
+        "formattedType" : "MultiArray (Float32 1 × 2050 × 201 × 2)",
+        "shortDescription" : "",
+        "shape" : "[1, 2050, 201, 2]",
+        "name" : "spectrum",
+        "type" : "MultiArray"
+      }
+    ],
+    "userDefinedMetadata" : {
+      "com.github.apple.coremltools.conversion_date" : "2026-10-07",
+      "com.github.apple.coremltools.source" : "torch==2.9.0",
+      "com.github.apple.coremltools.version" : "9.0",
+      "com.github.apple.coremltools.source_dialect" : "TorchScript"
+    },
+    "generatedClassName" : "separator",
+    "method" : "predict"
+  }
+]
